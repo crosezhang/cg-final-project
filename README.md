@@ -27,6 +27,7 @@ After setting up krakenuniq and the associated minikraken database, install phyl
 ```
 conda install phyloligo -c itsmeludo
 ```
+
 Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments
 ```
 bash cont-pipeline.sh <input-filename> <output-filename>

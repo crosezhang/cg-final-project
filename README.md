@@ -1,9 +1,15 @@
 # cg-final-project
 
-Creating test fasta files:
+## This project utilizes a dual-method approach to accurately identify contaminants in sequencing data. 
+
+It integrates the Kraken algorithm, which relies on reference databases, with the database-independent algorithm PhylOligo. By analyzing sequencing reads, Kraken constructs a taxonomic profile to flag potential contaminants. Concurrently, PhylOligo develops a distance matrix to compute relations between sequencing reads. Our program leverages these outputs to pinpoint potential contaminants. The program cross-references the findings from analyzing each of the outputs to identify high-confidence contaminants. Additionally, it conducts an analysis of the sequences flagged by both methods, providing insights into the reliability and correlation of the outcomes from these distinct approaches.
+
+## Creating test fasta files:
+# TO DO: write how to create test files using the program
 input requires full genome sequencing of prokaryotic
 run the script create_test_file.py
 
+## Running the program:
 
 Designed to be run on Linux OS using anaconda.
 
@@ -34,7 +40,7 @@ After setting up krakenuniq and the associated minikraken database, install phyl
 conda install phyloligo -c itsmeludo
 ```
 
-Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments, where the inputfile name is the fasta file of the sequences, and output is the txt file indicating the identified contaminants by the analysis
+Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments, where the inputfile name is the fasta file of the sequences, and output is the txt file indicating the identified contaminants by the analysis.
 ```
 bash cont-pipeline.sh <input-filename> <output-filename>
 ```

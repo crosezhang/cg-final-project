@@ -1,15 +1,11 @@
 import random
 import sys
 
-# input:
-# [python3] [create_test_file.py] [input_file_1_name] [number of sequences input_file_1] [input_file_2_name] [number of sequences input_file_2] [sequence_length]
-
 input_file_1 = sys.argv[1]
 input_file_1_num = int(sys.argv[2])  # number of sequences for input file 1
 input_file_2 = sys.argv[3]
 input_file_2_num = int(sys.argv[4])  # number of sequences for input file 2
 sequence_length = int(sys.argv[5])
-
 
 def extract_and_write_random_lines(file_1, input_1, file_2, input_2, seq_length):
     def get_random_lines(file_path, num_sequences, seq_length):

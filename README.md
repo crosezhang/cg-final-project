@@ -5,9 +5,11 @@
 It integrates the Kraken algorithm, which relies on reference databases, with the database-independent algorithm PhylOligo. By analyzing sequencing reads, Kraken constructs a taxonomic profile to flag potential contaminants. Concurrently, PhylOligo develops a distance matrix to compute relations between sequencing reads. Our program leverages these outputs to pinpoint potential contaminants. The program cross-references the findings from analyzing each of the outputs to identify high-confidence contaminants. Additionally, it conducts an analysis of the sequences flagged by both methods, providing insights into the reliability and correlation of the outcomes from these distinct approaches.
 
 ## Creating test fasta files:
-# TO DO: write how to create test files using the program
-input requires full genome sequencing of prokaryotic
+input requires a main genome file and a contaminant genome file
 run the script create_test_file.py
+```
+python3 create_test_file.py [main genome file path] [number of sequences from main genome file] [contaminant genome file path] [number of sequences from contaminant genome file] [sequence length]
+```
 
 ## Running the program:
 

@@ -1,0 +1,224 @@
+Kraken Identified Target Species:
+:                  Mycobacterium tuberculosis complex
+         % reads taxReads  ...           rank                                            taxName  rank_index
+0      100   220        1  ...        no rank                                               root          11
+1    99.55   219        0  ...        no rank                                 cellular organisms          11
+8       60   132      132  ...        species                                   Escherichia coli           9
+15   9.091    20       19  ...  species group                    Mycobacterium tuberculosis c...           8
+16  0.4545     1        1  ...        species                         Mycobacterium tuberculosis           9
+
+[5 rows x 10 columns]
+Kraken Identified Potential Contaminants:
+ecoli_Sequence79_Lines_41827_to_41832
+ecoli_Sequence51_Lines_72338_to_72343
+ecoli_Sequence131_Lines_44030_to_44035
+ecoli_Sequence93_Lines_29729_to_29734
+ecoli_Sequence14_Lines_51172_to_51177
+ecoli_Sequence45_Lines_55160_to_55165
+ecoli_Sequence199_Lines_15404_to_15409
+ecoli_Sequence178_Lines_58574_to_58579
+ecoli_Sequence152_Lines_2944_to_2949
+ecoli_Sequence24_Lines_8029_to_8034
+ecoli_Sequence78_Lines_73918_to_73923
+ecoli_Sequence26_Lines_55198_to_55203
+ecoli_Sequence8_Lines_29999_to_30004
+ecoli_Sequence129_Lines_43221_to_43226
+ecoli_Sequence103_Lines_27486_to_27491
+ecoli_Sequence47_Lines_57531_to_57536
+ecoli_Sequence164_Lines_33779_to_33784
+ecoli_Sequence153_Lines_23006_to_23011
+ecoli_Sequence22_Lines_70556_to_70561
+ecoli_Sequence1_Lines_35644_to_35649
+ecoli_Sequence134_Lines_56215_to_56220
+ecoli_Sequence104_Lines_64500_to_64505
+ecoli_Sequence189_Lines_31847_to_31852
+ecoli_Sequence100_Lines_57923_to_57928
+ecoli_Sequence169_Lines_73697_to_73702
+ecoli_Sequence123_Lines_7817_to_7822
+ecoli_Sequence77_Lines_30198_to_30203
+ecoli_Sequence13_Lines_34959_to_34964
+ecoli_Sequence16_Lines_45943_to_45948
+ecoli_Sequence18_Lines_4550_to_4555
+ecoli_Sequence127_Lines_42617_to_42622
+ecoli_Sequence55_Lines_50502_to_50507
+ecoli_Sequence172_Lines_58493_to_58498
+ecoli_Sequence73_Lines_59552_to_59557
+ecoli_Sequence155_Lines_16559_to_16564
+ecoli_Sequence156_Lines_15360_to_15365
+ecoli_Sequence126_Lines_34061_to_34066
+ecoli_Sequence43_Lines_60282_to_60287
+ecoli_Sequence158_Lines_23886_to_23891
+ecoli_Sequence97_Lines_45814_to_45819
+ecoli_Sequence139_Lines_37502_to_37507
+ecoli_Sequence53_Lines_1105_to_1110
+ecoli_Sequence58_Lines_65561_to_65566
+ecoli_Sequence91_Lines_19676_to_19681
+ecoli_Sequence132_Lines_49362_to_49367
+ecoli_Sequence102_Lines_44951_to_44956
+ecoli_Sequence66_Lines_30272_to_30277
+ecoli_Sequence96_Lines_53615_to_53620
+ecoli_Sequence151_Lines_69877_to_69882
+ecoli_Sequence34_Lines_72588_to_72593
+ecoli_Sequence85_Lines_69608_to_69613
+ecoli_Sequence30_Lines_39600_to_39605
+ecoli_Sequence29_Lines_20521_to_20526
+ecoli_Sequence186_Lines_52241_to_52246
+ecoli_Sequence7_Lines_27126_to_27131
+ecoli_Sequence176_Lines_9223_to_9228
+ecoli_Sequence68_Lines_12742_to_12747
+ecoli_Sequence5_Lines_72526_to_72531
+ecoli_Sequence133_Lines_61486_to_61491
+ecoli_Sequence83_Lines_62719_to_62724
+ecoli_Sequence197_Lines_45444_to_45449
+ecoli_Sequence37_Lines_76694_to_76699
+ecoli_Sequence142_Lines_8778_to_8783
+ecoli_Sequence25_Lines_28556_to_28561
+ecoli_Sequence88_Lines_74580_to_74585
+ecoli_Sequence82_Lines_15655_to_15660
+ecoli_Sequence193_Lines_41496_to_41501
+ecoli_Sequence146_Lines_13637_to_13642
+ecoli_Sequence180_Lines_26607_to_26612
+ecoli_Sequence23_Lines_47263_to_47268
+ecoli_Sequence185_Lines_10202_to_10207
+ecoli_Sequence118_Lines_4110_to_4115
+ecoli_Sequence80_Lines_62012_to_62017
+ecoli_Sequence10_Lines_50376_to_50381
+ecoli_Sequence196_Lines_39517_to_39522
+ecoli_Sequence165_Lines_56478_to_56483
+ecoli_Sequence11_Lines_67824_to_67829
+ecoli_Sequence9_Lines_20394_to_20399
+ecoli_Sequence174_Lines_16676_to_16681
+ecoli_Sequence4_Lines_53280_to_53285
+ecoli_Sequence15_Lines_74129_to_74134
+ecoli_Sequence111_Lines_34331_to_34336
+ecoli_Sequence141_Lines_9334_to_9339
+ecoli_Sequence125_Lines_36480_to_36485
+ecoli_Sequence137_Lines_34362_to_34367
+ecoli_Sequence121_Lines_70523_to_70528
+ecoli_Sequence183_Lines_8414_to_8419
+ecoli_Sequence192_Lines_71823_to_71828
+ecoli_Sequence62_Lines_24068_to_24073
+ecoli_Sequence59_Lines_35153_to_35158
+ecoli_Sequence86_Lines_59139_to_59144
+ecoli_Sequence32_Lines_65909_to_65914
+ecoli_Sequence94_Lines_25340_to_25345
+ecoli_Sequence116_Lines_44909_to_44914
+ecoli_Sequence149_Lines_36143_to_36148
+ecoli_Sequence198_Lines_8776_to_8781
+ecoli_Sequence19_Lines_12150_to_12155
+ecoli_Sequence112_Lines_10841_to_10846
+ecoli_Sequence195_Lines_51470_to_51475
+ecoli_Sequence41_Lines_52526_to_52531
+ecoli_Sequence28_Lines_24058_to_24063
+ecoli_Sequence105_Lines_2283_to_2288
+ecoli_Sequence49_Lines_23190_to_23195
+ecoli_Sequence119_Lines_36022_to_36027
+ecoli_Sequence56_Lines_13025_to_13030
+ecoli_Sequence72_Lines_8836_to_8841
+ecoli_Sequence122_Lines_41592_to_41597
+ecoli_Sequence12_Lines_3463_to_3468
+ecoli_Sequence39_Lines_74194_to_74199
+ecoli_Sequence57_Lines_23203_to_23208
+ecoli_Sequence33_Lines_12687_to_12692
+ecoli_Sequence17_Lines_57530_to_57535
+ecoli_Sequence190_Lines_66279_to_66284
+ecoli_Sequence36_Lines_39763_to_39768
+ecoli_Sequence71_Lines_15470_to_15475
+ecoli_Sequence92_Lines_16104_to_16109
+ecoli_Sequence67_Lines_50482_to_50487
+ecoli_Sequence95_Lines_11819_to_11824
+ecoli_Sequence157_Lines_806_to_811
+ecoli_Sequence54_Lines_48608_to_48613
+ecoli_Sequence76_Lines_66346_to_66351
+ecoli_Sequence170_Lines_12160_to_12165
+ecoli_Sequence130_Lines_33958_to_33963
+ecoli_Sequence154_Lines_4839_to_4844
+ecoli_Sequence60_Lines_26643_to_26648
+ecoli_Sequence84_Lines_57688_to_57693
+ecoli_Sequence75_Lines_35999_to_36004
+ecoli_Sequence188_Lines_24327_to_24332
+ecoli_Sequence42_Lines_77249_to_77254
+ecoli_Sequence147_Lines_15109_to_15114
+ecoli_Sequence191_Lines_76581_to_76586
+ecoli_Sequence38_Lines_29177_to_29182
+ecoli_Sequence171_Lines_19380_to_19385
+tb_Sequence1_Lines_2339_to_2344
+
+PhylOligo Identified Potential Contaminants:
+ecoli_Sequence45_Lines_55160_to_55165
+ecoli_Sequence199_Lines_15404_to_15409
+ecoli_Sequence26_Lines_55198_to_55203
+ecoli_Sequence108_Lines_75409_to_75414
+ecoli_Sequence164_Lines_33779_to_33784
+ecoli_Sequence123_Lines_7817_to_7822
+ecoli_Sequence77_Lines_30198_to_30203
+ecoli_Sequence16_Lines_45943_to_45948
+ecoli_Sequence101_Lines_14962_to_14967
+ecoli_Sequence73_Lines_59552_to_59557
+ecoli_Sequence158_Lines_23886_to_23891
+ecoli_Sequence58_Lines_65561_to_65566
+ecoli_Sequence91_Lines_19676_to_19681
+ecoli_Sequence29_Lines_20521_to_20526
+ecoli_Sequence186_Lines_52241_to_52246
+ecoli_Sequence7_Lines_27126_to_27131
+ecoli_Sequence68_Lines_12742_to_12747
+ecoli_Sequence162_Lines_64536_to_64541
+ecoli_Sequence146_Lines_13637_to_13642
+ecoli_Sequence9_Lines_20394_to_20399
+ecoli_Sequence174_Lines_16676_to_16681
+ecoli_Sequence4_Lines_53280_to_53285
+ecoli_Sequence79_Lines_41827_to_41832
+ecoli_Sequence111_Lines_34331_to_34336
+ecoli_Sequence32_Lines_65909_to_65914
+ecoli_Sequence144_Lines_27408_to_27413
+ecoli_Sequence49_Lines_23190_to_23195
+ecoli_Sequence12_Lines_3463_to_3468
+ecoli_Sequence190_Lines_66279_to_66284
+ecoli_Sequence36_Lines_39763_to_39768
+ecoli_Sequence92_Lines_16104_to_16109
+ecoli_Sequence191_Lines_76581_to_76586
+
+Common Contaminants (High Confidence):
+ecoli_Sequence190_Lines_66279_to_66284
+ecoli_Sequence164_Lines_33779_to_33784
+ecoli_Sequence32_Lines_65909_to_65914
+ecoli_Sequence191_Lines_76581_to_76586
+ecoli_Sequence111_Lines_34331_to_34336
+ecoli_Sequence36_Lines_39763_to_39768
+ecoli_Sequence45_Lines_55160_to_55165
+ecoli_Sequence58_Lines_65561_to_65566
+ecoli_Sequence77_Lines_30198_to_30203
+ecoli_Sequence186_Lines_52241_to_52246
+ecoli_Sequence16_Lines_45943_to_45948
+ecoli_Sequence7_Lines_27126_to_27131
+ecoli_Sequence146_Lines_13637_to_13642
+ecoli_Sequence26_Lines_55198_to_55203
+ecoli_Sequence158_Lines_23886_to_23891
+ecoli_Sequence79_Lines_41827_to_41832
+ecoli_Sequence123_Lines_7817_to_7822
+ecoli_Sequence199_Lines_15404_to_15409
+ecoli_Sequence9_Lines_20394_to_20399
+ecoli_Sequence73_Lines_59552_to_59557
+ecoli_Sequence29_Lines_20521_to_20526
+ecoli_Sequence12_Lines_3463_to_3468
+ecoli_Sequence91_Lines_19676_to_19681
+ecoli_Sequence174_Lines_16676_to_16681
+ecoli_Sequence49_Lines_23190_to_23195
+ecoli_Sequence68_Lines_12742_to_12747
+ecoli_Sequence92_Lines_16104_to_16109
+ecoli_Sequence4_Lines_53280_to_53285
+
+Contaminant Sequence Count Analysis:
+PhylOligo contaminant count: 32
+Kraken contaminant count: 134
+
+Probability Estimation:
+P(PhylOligo|Kraken): 0.208955223880597
+P(Kraken|PhylOligo): 0.875
+
+Chi-Square Test for Statistical Significance:
+Chi-square test p-value: 2.965245681379643e-23
+
+Confidence Intervals for Probability Estimations:
+Confidence interval for P(PhylOligo|Kraken): (nan, nan)
+Confidence interval for P(Kraken|PhylOligo): (nan, nan)

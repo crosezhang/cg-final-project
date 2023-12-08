@@ -1,0 +1,72 @@
+Kraken Identified Target Species:
+:                  Mycobacterium tuberculosis complex
+         % reads taxReads  ...           rank                                            taxName  rank_index
+0      100   202        0  ...        no rank                                               root          11
+1      100   202        0  ...        no rank                                 cellular organisms          11
+9    97.03   196      175  ...  species group                    Mycobacterium tuberculosis c...           8
+10    10.4    21       21  ...        species                         Mycobacterium tuberculosis           9
+11   1.485     3        1  ...  species group                    Mycobacterium avium complex ...           8
+12  0.9901     2        2  ...        species                             Mycobacterium chimaera           9
+18  0.9901     2        2  ...        species                                   Escherichia coli           9
+
+[7 rows x 10 columns]
+Kraken Identified Potential Contaminants:
+tb_Sequence53_Lines_11984_to_11989
+tb_Sequence185_Lines_42572_to_42577
+tb_Sequence180_Lines_34894_to_34899
+tb_Sequence59_Lines_44562_to_44567
+tb_Sequence108_Lines_52583_to_52588
+tb_Sequence28_Lines_46346_to_46351
+tb_Sequence139_Lines_44560_to_44565
+tb_Sequence119_Lines_39913_to_39918
+tb_Sequence9_Lines_49976_to_49981
+tb_Sequence175_Lines_48317_to_48322
+tb_Sequence193_Lines_42536_to_42541
+tb_Sequence76_Lines_6181_to_6186
+tb_Sequence192_Lines_50728_to_50733
+tb_Sequence16_Lines_27177_to_27182
+tb_Sequence151_Lines_22276_to_22281
+tb_Sequence44_Lines_53027_to_53032
+tb_Sequence116_Lines_53409_to_53414
+tb_Sequence124_Lines_975_to_980
+tb_Sequence84_Lines_193_to_198
+tb_Sequence62_Lines_48973_to_48978
+tb_Sequence174_Lines_18720_to_18725
+tb_Sequence86_Lines_4348_to_4353
+tb_Sequence85_Lines_60854_to_60859
+tb_Sequence117_Lines_14994_to_14999
+ecoli_Sequence1_Lines_56649_to_56654
+ecoli_Sequence2_Lines_62149_to_62154
+
+PhylOligo Identified Potential Contaminants:
+tb_Sequence53_Lines_11984_to_11989
+ecoli_Sequence1_Lines_56649_to_56654
+tb_Sequence113_Lines_56353_to_56358
+tb_Sequence49_Lines_52339_to_52344
+tb_Sequence42_Lines_54183_to_54188
+tb_Sequence43_Lines_56391_to_56396
+tb_Sequence76_Lines_6181_to_6186
+tb_Sequence117_Lines_14994_to_14999
+tb_Sequence116_Lines_53409_to_53414
+
+Common Contaminants (High Confidence):
+tb_Sequence117_Lines_14994_to_14999
+ecoli_Sequence1_Lines_56649_to_56654
+tb_Sequence76_Lines_6181_to_6186
+tb_Sequence116_Lines_53409_to_53414
+tb_Sequence53_Lines_11984_to_11989
+
+Contaminant Sequence Count Analysis:
+PhylOligo contaminant count: 9
+Kraken contaminant count: 26
+
+Probability Estimation:
+P(PhylOligo|Kraken): 0.19230769230769232
+P(Kraken|PhylOligo): 0.5555555555555556
+
+Chi-Square Test for Statistical Significance:
+Chi-square test p-value: 0.004656979018058263
+
+Confidence Intervals for Probability Estimations:
+Confidence interval for P(PhylOligo|Kraken): (nan, nan)
+Confidence interval for P(Kraken|PhylOligo): (nan, nan)

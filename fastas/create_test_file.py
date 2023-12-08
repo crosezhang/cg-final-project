@@ -10,7 +10,6 @@ input_file_2 = sys.argv[3]
 input_file_2_num = int(sys.argv[4])  # number of sequences for input file 2
 sequence_length = int(sys.argv[5])
 
-
 def extract_and_write_random_lines(file_1, input_1, file_2, input_2, seq_length):
     def get_random_lines(file_path, num_sequences, seq_length):
         with open(file_path, 'r') as file:

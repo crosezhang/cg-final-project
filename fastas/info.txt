@@ -1,6 +1,0 @@
-ecoli-contaimined-tb.fasta was contaiminaed with tb.fasta from lines 49,000 to 53725 at lines 44000
-
-This was done by random number generating from 1 to 63 inside ecoli's genome and taking 7.5 percent of  tb's genome, which is
-roughly 4725 lines of genes.
-
-ecoli-contaimined-random.fasta was contaiminaed with random_genomic_sequence.txt at lines 44000

@@ -33,52 +33,55 @@ def parse_kraken_output(file_path):
                 # Assuming this line is part of the table
                 table_data.append(line.strip().split('\t'))
 
+    # Remove header row if it exists in table_data
+    if table_data[0][0] == '%':
+        table_data.pop(0)
+
     # Converting table data to DataFrame
     columns = ['%', 'reads', 'taxReads', 'kmers', 'dup', 'cov', 'taxID', 'rank', 'taxName']
     df = pd.DataFrame(table_data, columns=columns)
     return sequence_taxid_mapping, df
 
-
 sequence_taxid_mapping, kraken_df = parse_kraken_output(kraken_file)
 
-# pre-processing: filling values of rank
-kraken_df.loc[(kraken_df['rank'] == 'no rank') & kraken_df['taxName'].str.contains('str'), 'rank'] = 'strain'
-kraken_df.loc[(kraken_df['rank'] == 'no rank') & kraken_df['taxName'].str.contains('group'), 'rank'] = 'kingdom'
+#pre-processing: filling values of rank
+kraken_df.loc[(kraken_df['rank'] == 'no rank') & kraken_df['taxName'].str.contains('str'),'rank'] = 'strain'
+kraken_df.loc[(kraken_df['rank'] == 'no rank') & kraken_df['taxName'].str.contains('group'),'rank'] = 'kingdom'
+
+kraken_df["cov"] = pd.to_numeric(kraken_df["cov"])
 
 # Sort the DataFrame by rank specificity and coverage
-rank_order = ['domain', 'superkingdom', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species group',
-              'species', 'strain', 'no rank']
+rank_order = ['domain','superkingdom', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species group','species', 'strain', 'no rank']
 rank_index = {rank: index for index, rank in enumerate(rank_order)}
 kraken_df['rank_index'] = kraken_df['rank'].map(rank_index)
 
 df_sorted = kraken_df.sort_values(by=['rank_index', 'cov'], ascending=[True, False])
-# print(df_sorted.head())
 
-# Filter to the lowest rank index (max score)
-n = int(len(kraken_df) / 3)
-lowest_rank_index = kraken_df['rank_index'].nlargest(n).unique()
-df_lowest_rank = kraken_df[kraken_df['rank_index'].isin(lowest_rank_index)]
-print(df_lowest_rank)
+#Filtering df to lowest ranks (max rank_index values to identify contaminants)
+df_filtered = kraken_df[kraken_df['rank_index'] >= 8]
 
 # Identify the target species based on the highest coverage
-target_row = df_lowest_rank.sort_values(by='cov', ascending=False).iloc[0]
+df_cov_sorted = df_filtered.sort_values(by='cov', ascending=False)
+for index, row in df_cov_sorted.iterrows():
+    if row['rank_index'] != 11:
+        target_row = row
+        break
+
 target_species_name = target_row['taxName']
 target_species_id = target_row['taxID']
-print(f"Target species: {target_species_name} (TaxID: {target_species_id})")
 
 kraken_contaminants_dict = []
 kraken_contaminants = []
 
 # Iterate through the lowest rank dataframe
-for index, row in df_lowest_rank.iterrows():
+for index, row in df_filtered.iterrows():
     if row['taxName'] != target_species_name:
         # For each potential contaminant, find the corresponding sequence IDs
         sequence_ids = [seq_id for seq_id, tax_id in sequence_taxid_mapping.items() if str(tax_id) == str(row['taxID'])]
         # Append the contaminant details to the list
-        kraken_contaminants_dict.append(
-            {'taxName': row['taxName'], 'taxID': row['taxID'], 'sequence_IDs': sequence_ids})
+        kraken_contaminants_dict.append({'taxName': row['taxName'], 'taxID': row['taxID'], 'sequence_IDs': sequence_ids})
         kraken_contaminants.extend(sequence_ids)
-
+        
 # Output the list of contaminants
 print(kraken_contaminants)
 
@@ -291,6 +294,10 @@ print(f"Confidence interval for P(PhylOligo|Kraken): {phyloligo_interval}")
 print(f"Confidence interval for P(Kraken|PhylOligo): {kraken_interval}")
 
 with open(output_file, 'w') as f:
+    f.write("Kraken Identified Target Species:\n:")
+    f.write(f"{target_species_name}\n")
+    f.write(f"{df_filtered}\n")
+
     f.write("Kraken Identified Potential Contaminants:\n")
     f.writelines([f"{cont}\n" for cont in kraken_contaminants])
 

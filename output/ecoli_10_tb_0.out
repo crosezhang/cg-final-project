@@ -1,0 +1,31 @@
+Kraken Identified Target Species:
+:                Escherichia coli
+     % reads taxReads kmers  ...   taxID     rank                           taxName rank_index
+0  100    10        0   170  ...       1  no rank                              root         11
+1  100    10        0   162  ...  131567  no rank                cellular organisms         11
+8   80     8        8    35  ...     562  species                  Escherichia coli          9
+
+[3 rows x 10 columns]
+Kraken Identified Potential Contaminants:
+
+PhylOligo Identified Potential Contaminants:
+ecoli_Sequence5_Lines_66754_to_66759
+ecoli_Sequence2_Lines_29322_to_29327
+ecoli_Sequence8_Lines_16997_to_17002
+
+Common Contaminants (High Confidence):
+
+Contaminant Sequence Count Analysis:
+PhylOligo contaminant count: 3
+Kraken contaminant count: 0
+
+Probability Estimation:
+P(PhylOligo|Kraken): 0
+P(Kraken|PhylOligo): 0.0
+
+Chi-Square Test for Statistical Significance:
+Chi-square test p-value: 0.2104064530953678
+
+Confidence Intervals for Probability Estimations:
+Confidence interval for P(PhylOligo|Kraken): (nan, nan)
+Confidence interval for P(Kraken|PhylOligo): (nan, nan)

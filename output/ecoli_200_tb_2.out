@@ -1,0 +1,51 @@
+Kraken Identified Target Species:
+:                Escherichia coli
+         % reads taxReads  ...           rank                                            taxName  rank_index
+0      100   202        7  ...        no rank                                               root          11
+1    96.53   195        0  ...        no rank                                 cellular organisms          11
+8     69.8   141      141  ...        species                                   Escherichia coli           9
+15  0.9901     2        2  ...  species group                    Mycobacterium tuberculosis c...           8
+
+[4 rows x 10 columns]
+Kraken Identified Potential Contaminants:
+ecoli_Sequence128_Lines_18662_to_18667
+ecoli_Sequence37_Lines_27856_to_27861
+ecoli_Sequence140_Lines_44135_to_44140
+ecoli_Sequence86_Lines_41795_to_41800
+ecoli_Sequence70_Lines_18159_to_18164
+ecoli_Sequence36_Lines_18548_to_18553
+ecoli_Sequence62_Lines_42001_to_42006
+tb_Sequence1_Lines_28551_to_28556
+tb_Sequence2_Lines_53849_to_53854
+
+PhylOligo Identified Potential Contaminants:
+ecoli_Sequence142_Lines_77771_to_77776
+ecoli_Sequence187_Lines_39788_to_39793
+ecoli_Sequence107_Lines_25800_to_25805
+ecoli_Sequence163_Lines_9539_to_9544
+ecoli_Sequence97_Lines_65900_to_65905
+ecoli_Sequence92_Lines_67046_to_67051
+ecoli_Sequence139_Lines_67022_to_67027
+ecoli_Sequence122_Lines_65643_to_65648
+ecoli_Sequence171_Lines_18697_to_18702
+ecoli_Sequence144_Lines_12196_to_12201
+ecoli_Sequence138_Lines_64980_to_64985
+ecoli_Sequence86_Lines_41795_to_41800
+
+Common Contaminants (High Confidence):
+ecoli_Sequence86_Lines_41795_to_41800
+
+Contaminant Sequence Count Analysis:
+PhylOligo contaminant count: 12
+Kraken contaminant count: 9
+
+Probability Estimation:
+P(PhylOligo|Kraken): 0.1111111111111111
+P(Kraken|PhylOligo): 0.08333333333333333
+
+Chi-Square Test for Statistical Significance:
+Chi-square test p-value: 0.6539792270825466
+
+Confidence Intervals for Probability Estimations:
+Confidence interval for P(PhylOligo|Kraken): (nan, nan)
+Confidence interval for P(Kraken|PhylOligo): (nan, nan)

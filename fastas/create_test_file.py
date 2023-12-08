@@ -18,7 +18,7 @@ def extract_and_write_random_lines(file_1, input_1, file_2, input_2, seq_length)
                 selected_seq = lines[start_index:start_index + seq_length]
                 sequence = ''.join(selected_seq)
                 file_label = os.path.basename(file_path).removesuffix('.fasta')
-                sequence_label = f"{file_label} Sequence{seq_num + 1} Lines {start_index + 1} to {start_index + seq_length}"
+                sequence_label = f"{file_label}_Sequence{seq_num + 1}_Lines_{start_index + 1}_to_{start_index + seq_length}"
                 selected_lines.append(f">{sequence_label}\n{sequence}")
             return selected_lines
 

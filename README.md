@@ -1,4 +1,10 @@
 # cg-final-project
+
+Creating test fasta files:
+input requires full genome sequencing of prokaryotic
+run the script create_test_file.py
+
+
 Designed to be run on Linux OS using anaconda.
 
 Begin by creating a new environment in anaconda 
@@ -28,7 +34,7 @@ After setting up krakenuniq and the associated minikraken database, install phyl
 conda install phyloligo -c itsmeludo
 ```
 
-Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments
+Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments, where the inputfile name is the fasta file of the sequences, and output is the txt file indicating the identified contaminants by the analysis
 ```
 bash cont-pipeline.sh <input-filename> <output-filename>
 ```

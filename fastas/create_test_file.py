@@ -24,7 +24,7 @@ def extract_and_write_random_lines(file_1, input_1, file_2, input_2, seq_length)
     combined_sequences = lines_from_file_1 + lines_from_file_2
     random.shuffle(combined_sequences)  # Shuffling the combined sequences
 
-    output_file_path = f"{input_file_1.removesuffix('.fasta')}_{input_1}_{input_file_2.removesuffix('.fasta')}_{input_2}.txt"
+    output_file_path = f"{input_file_1.removesuffix('.fasta')}_{input_1}_{input_file_2.removesuffix('.fasta')}_{input_2}.fasta"
 
     with open(output_file_path, 'w') as output_file:
         for seq in combined_sequences:

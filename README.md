@@ -42,5 +42,7 @@ conda install phyloligo -c itsmeludo
 
 Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments, where the inputfile name is the fasta file of the sequences, and output is the txt file indicating the identified contaminants by the analysis.
 ```
-bash cont-pipeline.sh <fastas-directory> <kraken-output-directory> <phyloligo-output-directory> <overall-output-directory>
+bash cont-pipeline.sh <fastas-dir> <kraken-output-dir> <phyloligo-output-dir> <overall-output-dir>
 ```
+
+If the last Python analysis script doesn't work, use `pip3` to import the missing packages.

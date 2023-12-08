@@ -50,11 +50,11 @@ tb_Sequence117_Lines_14994_to_14999
 tb_Sequence116_Lines_53409_to_53414
 
 Common Contaminants (High Confidence):
+tb_Sequence53_Lines_11984_to_11989
 tb_Sequence117_Lines_14994_to_14999
+tb_Sequence116_Lines_53409_to_53414
 ecoli_Sequence1_Lines_56649_to_56654
 tb_Sequence76_Lines_6181_to_6186
-tb_Sequence116_Lines_53409_to_53414
-tb_Sequence53_Lines_11984_to_11989
 
 Contaminant Sequence Count Analysis:
 PhylOligo contaminant count: 9

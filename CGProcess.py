@@ -83,8 +83,6 @@ for index, row in df_filtered.iterrows():
         kraken_contaminants.extend(sequence_ids)
         
 # Output the list of contaminants
-print(kraken_contaminants)
-
 
 def calculate_gc_content(sequence):
     gc_count = sum(1 for base in sequence if base in ["G", "C"])
@@ -139,9 +137,6 @@ atypical_gc_data.sort(key=lambda x: x[1], reverse=True)
 # Extract sorted sequence IDs
 sorted_atypical_sequences = [data[0] for data in atypical_gc_data]
 
-# Output the sorted sequence IDs
-print(sorted_atypical_sequences)
-
 
 def generate_all_kmers(k_size):
     """Generate all possible k-mers for a given size and alphabet."""
@@ -183,12 +178,6 @@ def cluster_sequences(kmer_profiles, sequence_ids, k_size, n_clusters=2):
     for sequence_id, label in labeled_sequences.items():
         clusters[label].append(sequence_id)
 
-    # Print out the sequences in each cluster
-    for cluster_id, sequence_ids in clusters.items():
-        print(f"Cluster {cluster_id}:")
-        for seq_id in sequence_ids:
-            print(f" - Sequence ID: {seq_id}")
-
     return labels, clusters
 
 
@@ -199,6 +188,9 @@ all_kmers = generate_all_kmers(k_size)
 # Generate k-mer profiles for all sequences
 kmer_profiles = [generate_kmer_profile(seq, all_kmers) for seq in sequences.values()]
 labels = cluster_sequences(kmer_profiles, sequence_ids, k_size=6)
+
+
+# START OF USE OF PHYLOLIGO
 
 # Load the distance matrix
 distance_matrix = np.loadtxt(phyloligo_file)
@@ -226,8 +218,8 @@ most_common_cluster = cluster_counts.most_common(1)[0][0]
 # Identify potential contaminants
 # These are sequences whose cluster label is not the most common cluster label
 phyloligo_contaminants = [sequence_ids[i] for i, cluster in enumerate(cluster_labels) if cluster != most_common_cluster]
-print(phyloligo_contaminants)
 
+# END OF PHYLOLIGO
 
 def fuzzy_match(seq1, seq2):
     # Create patterns to match whole words
@@ -249,21 +241,13 @@ for p_seq in phyloligo_set:
         if fuzzy_match(p_seq, k_seq):
             common_contaminants.add(k_seq)
 
-# Output the common contaminants
-print(common_contaminants)
-
 # Contaminant Sequence Count Analysis
 phyloligo_count = len(set(phyloligo_contaminants))
 kraken_count = len(set(kraken_contaminants))
-print(f"PhylOligo contaminant count: {phyloligo_count}")
-print(f"Kraken contaminant count: {kraken_count}")
-
 # Probability Estimation
 common_count = len(common_contaminants)
 prob_phyloligo_given_kraken = 0 if kraken_count == 0 else common_count / kraken_count
 prob_kraken_given_phyloligo = 0 if phyloligo_count == 0 else common_count / phyloligo_count
-print(f"P(PhylOligo|Kraken): {prob_phyloligo_given_kraken}")
-print(f"P(Kraken|PhylOligo): {prob_kraken_given_phyloligo}")
 
 # Sequence length analysis
 phyloligo_lengths = [len(sequences[seq_id]) for seq_id in phyloligo_contaminants if seq_id in sequences]
@@ -283,15 +267,12 @@ plt.show()
 # Create a contingency table
 contingency_table = [[phyloligo_count, kraken_count], [len(sequences) - phyloligo_count, len(sequences) - kraken_count]]
 chi2, p, dof, ex = chi2_contingency(contingency_table)
-print(f"Chi-square test p-value: {p}")
 
 # Confidence Interval Calculation for Probability Estimations
 confidence = 0.95
 phyloligo_interval = stats.norm.interval(confidence, loc=prob_phyloligo_given_kraken,
                                          scale=stats.sem(phyloligo_lengths))
 kraken_interval = stats.norm.interval(confidence, loc=prob_kraken_given_phyloligo, scale=stats.sem(kraken_lengths))
-print(f"Confidence interval for P(PhylOligo|Kraken): {phyloligo_interval}")
-print(f"Confidence interval for P(Kraken|PhylOligo): {kraken_interval}")
 
 with open(output_file, 'w') as f:
     f.write("Kraken Identified Target Species:\n:")

@@ -2,7 +2,7 @@
 
 ## This project utilizes a dual-method approach to accurately identify contaminants in sequencing data. 
 
-It integrates the Kraken algorithm, which relies on reference databases, with the database-independent algorithm PhylOligo. By analyzing sequencing reads, Kraken constructs a taxonomic profile to flag potential contaminants. Concurrently, PhylOligo develops a distance matrix to compute relations between sequencing reads. Our program leverages these outputs to pinpoint potential contaminants. The program cross-references the findings from analyzing each of the outputs to identify high-confidence contaminants. Additionally, it conducts an analysis of the sequences flagged by both methods, providing insights into the reliability and correlation of the outcomes from these distinct approaches.
+It integrates the Kraken algorithm, which relies on reference databases, with the database-independent algorithm PhylOligo. By analyzing sequencing reads, Kraken constructs a taxonomic profile to flag potential contaminants. Concurrently, PhylOligo develops a distance matrix to compute relations between sequencing reads. Our program leverages these outputs to pinpoint potential contaminants. The program cross-references the findings from analyzing each of the outputs to identify high-confidence contaminants. Additionally, it conducts an analysis of the sequences flagged by both methods, providing insights into the reliability and correlation of the outcomes from these distinct approaches. We utilized [KrakenUniq](https://github.com/fbreitwieser/krakenuniq/tree/master) and [PhylOligo](https://github.com/itsmeludo/PhylOligo) in addition to using some of the PhylOligo source code in our python analysis file as the conda package itself wasn't working in some parts. We have labeled these parts in our code (lines 204-234)
 
 ## Creating test fasta files:
 input requires a main genome file and a contaminant genome file
@@ -42,9 +42,13 @@ After setting up krakenuniq and the associated minikraken database, install phyl
 conda install phyloligo -c itsmeludo
 ```
 
-Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments, where the inputfile name is the fasta file of the sequences, and output is the txt file indicating the identified contaminants by the analysis.
+Once you have all of the appropriate packages installed, you should be able to run the bash file using the following command and entering the appropriate arguments.
 ```
-bash cont-pipeline.sh <fastas-dir> <kraken-output-dir> <phyloligo-output-dir> <overall-output-dir>
+bash contam-pipeline.sh <fastas-dir> <kraken-output-dir> <phyloligo-output-dir> <overall-output-dir>
+```
+To obtain our results, we used the following command based on the structure of our repo.
+```
+bash contam-pipeline.sh ./fastas ./kraken ./phyloligo ./output
 ```
 
-If the last Python analysis script doesn't work, use `pip3` to import the missing packages.
+If the Python analysis script doesn't work due to missing packages, use `pip3` to import the missing packages.

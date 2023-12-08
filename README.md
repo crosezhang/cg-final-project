@@ -13,11 +13,14 @@ Then, install krakenuniq using the following command
 ```
 conda install -c bioconda krakenuniq
 ```
-We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. Download this database using the following commands
+We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. Download this database using the following commands. The complete download should take around 5 minutes. The uncompressing process also should take a few minutes.
 
 ```
-curl -O https://ccb.jhu.edu/software/kraken/dl minikraken_20171019_8GB.tgz
-unzip minikraken_20171019_8GB.tgz -d minikraken/
+curl -O https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz
+mkdir minikraken
+tar -xvzf minikraken_20171019_8GB.tgz -C ./minikraken
+mv ./minikraken/minikraken_20171019_8GB/* ./minikraken
+rm -r ./minikraken/minikraken_20171019_8GB
 ```
 
 After setting up krakenuniq and the associated minikraken database, install phyloligo with conda

@@ -1,4 +1,5 @@
 # cg-final-project
+Designed to be run on Linux OS using anaconda.
 
 Begin by creating a new environment in anaconda 
 ```
@@ -12,7 +13,12 @@ Then, install krakenuniq using the following command
 ```
 conda install -c bioconda krakenuniq
 ```
-We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. The dataase is included already in this repo.
+We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. Download this database using the following commands
+
+```
+curl -O https://ccb.jhu.edu/software/kraken/dl minikraken_20171019_8GB.tgz
+unzip minikraken_20171019_8GB.tgz -d minikraken/
+```
 
 After setting up krakenuniq and the associated minikraken database, install phyloligo with conda
 ```

@@ -15,6 +15,11 @@ python3 create_test_file.py [main genome file path] [number of sequences from ma
 
 Designed to be run on Linux OS using anaconda.
 
+First clone this repo to get the necessary files.
+```
+git clone https://github.com/crosezhang/cg-final-project.git
+```
+
 Begin by creating a new environment in anaconda 
 ```
 conda create -n cont-detection

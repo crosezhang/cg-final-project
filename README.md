@@ -33,7 +33,7 @@ Then, install krakenuniq using the following command
 ```
 conda install -c bioconda krakenuniq
 ```
-We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. Download this database using the following commands. The complete download should take around 5 minutes. The uncompressing process also should take a few minutes.
+We will be using the minikraken 8GB database with krakenuniq to allow our program to run on most machines regardless of processing power. Download this database using the following commands. The complete download may take up to 30 minutes depending on internet speeds. If curl isn't working, then download the file from [this link](https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz) and continue with the rest of the operations. The uncompressing process also should take a few minutes.
 
 ```
 curl -O https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz
